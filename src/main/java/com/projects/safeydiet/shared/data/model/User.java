@@ -1,5 +1,6 @@
 package com.projects.safeydiet.shared.data.model;
 
+import com.projects.safeydiet.shared.data.enums.Role;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -29,7 +30,8 @@ public class User {
     @Column(name = "weekly_budget")
     private BigDecimal weeklyBudget;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @Enumerated(EnumType.STRING)
+    @Column(name="role", nullable = false)
     private Role role;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -7,7 +7,7 @@ import com.projects.safeydiet.feature.location.dto.UpdateLocationRequest;
 import java.util.List;
 
 public interface LocationService {
-    LocationResponse createLocation(CreateLocationRequest request) throws RuntimeException;
+    LocationResponse createLocation(CreateLocationRequest request);
     List<LocationResponse> retrieveAll();
     LocationResponse retrieveOne(Long id);
     LocationResponse updateLocation(Long id, UpdateLocationRequest request);

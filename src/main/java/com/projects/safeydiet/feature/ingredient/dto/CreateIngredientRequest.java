@@ -5,6 +5,6 @@ import org.springframework.validation.annotation.Validated;
 
 @Validated
 public record CreateIngredientRequest(
-        @NotBlank(message = "Role name required")
+        @NotBlank(message = "Ingredient name required")
         String name
 ){}

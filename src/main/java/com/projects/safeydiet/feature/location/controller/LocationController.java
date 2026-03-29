@@ -74,7 +74,7 @@ public class LocationController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ApiResponse> deleteCountry(@PathVariable Long id){
+    public ResponseEntity<ApiResponse> deleteLocation(@PathVariable Long id){
         locationService.deleteLocation(id);
         return ResponseEntity.ok().body(
                 ApiResponse.builder()

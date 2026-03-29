@@ -73,7 +73,7 @@ public class RoleController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ApiResponse> deleteCountry(@PathVariable Long id){
+    public ResponseEntity<ApiResponse> deleteRole(@PathVariable Long id){
         roleService.deleteRole(id);
         return ResponseEntity.ok().body(
                 ApiResponse.builder()

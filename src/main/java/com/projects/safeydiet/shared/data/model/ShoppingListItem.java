@@ -1,6 +1,5 @@
 package com.projects.safeydiet.shared.data.model;
 
-import com.projects.safeydiet.shared.data.enums.Unit;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -23,8 +22,7 @@ public class ShoppingListItem {
     @Column(name = "total_quantity")
     private BigDecimal totalQuantity;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "unit", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Unit unit;
 
     @Column(name = "price_per_unit", precision = 10, scale=2)

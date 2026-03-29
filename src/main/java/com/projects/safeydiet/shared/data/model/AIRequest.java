@@ -1,7 +1,6 @@
 package com.projects.safeydiet.shared.data.model;
 
 import com.projects.safeydiet.shared.data.enums.Status;
-import com.projects.safeydiet.shared.data.enums.Unit;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

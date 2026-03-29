@@ -14,7 +14,8 @@ public class IngredientPrice extends MasterEntity{
     @Column(name="status_id")
     private BigDecimal pricePerUnit;
 
-    private String unit;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Unit unit;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Ingredient ingredient;

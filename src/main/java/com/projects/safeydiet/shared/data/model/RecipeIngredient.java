@@ -1,6 +1,5 @@
 package com.projects.safeydiet.shared.data.model;
 
-import com.projects.safeydiet.shared.data.enums.Unit;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -14,8 +13,7 @@ public class RecipeIngredient {
     
     private BigDecimal quantity;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "unit", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Unit unit;
 
     @ManyToOne(fetch = FetchType.LAZY)

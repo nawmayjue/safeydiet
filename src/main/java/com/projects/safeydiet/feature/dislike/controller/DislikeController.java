@@ -45,7 +45,7 @@ public class DislikeController {
                 ApiResponse.builder()
                         .status(HttpStatus.OK.value())
                         .data(dislikeResponse)
-                        .message("Successfully updated an Dislike")
+                        .message("Successfully updated a Dislike")
                         .build()
         );
     }
